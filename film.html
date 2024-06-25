@@ -5,14 +5,23 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <script src="/film.js" defer></script>
+  <script src="/film.js" type="module"></script>
   <link rel="stylesheet" href="/site.css" />
   <title>A Star Wars film</title>
 </head>
 
 <body>
+  <header>
+    <div id="navbar">
+      <p>Star Wars Guide</p>
+      <ul>
+        <li><a class="navlink" href="index.html">Home</a></li>
+      </ul>
+    </div>
+  </header>
   <main>
     <h1 id="title"></h1>
+    <button id="fav-button" type="button">Add to Favorites</button>
     <section id="generalInfo">
       <p>Producer: <span id="producer"></span></p>
       <p>Director: <span id="director"></span></p>
