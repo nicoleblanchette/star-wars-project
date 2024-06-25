@@ -22,6 +22,11 @@ p {
   color: var(--light1);
 }
 
+h1 {
+  text-align: center;
+  padding: 3rem
+}
+
 button {
   background-color: var(--light2);
   color: var(--dark2);
@@ -114,6 +119,8 @@ section#characters ul,
 section#films ul {
   list-style-type: none;
   padding: 0;
+  display: flex;
+  flex-wrap: wrap;
 }
 
 section#planets a,
@@ -130,6 +137,8 @@ section#films a {
   margin: 10px;
   border-radius: 5px;
   border: 1px solid var(--dark2);
+
+  transition: all .25s;
 }
 
 #search-div {
@@ -138,7 +147,7 @@ section#films a {
   align-items: center;
 }
 
-/* #planetsList div:hover{
+#planets a:hover, #characters a:hover, #films a:hover{
   color: var(--light2);
   background-color: var(--dark2);
   scale: 1.1;
@@ -148,4 +157,16 @@ section#films a {
   color: var(--light2);
   background-color: var(--dark2);
   scale: 1.1;
+}
+
+/* #opening-container {
+  width: 30%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 } */
+
+#opening {
+  margin: 3rem;
+  text-align: center;
+}

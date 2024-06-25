@@ -58,8 +58,8 @@ const renderPlanet = planet => {
   climateSpan.textContent = planet?.climate;
   terrainSpan.textContent = planet?.terrain;
   popSpan.textContent = planet?.population;
-  const charLis = planet?.characters.map(character => `<li><a href="/character.html?id=${character.id}">${character.name}</li>`);
+  const charLis = planet?.characters.sort((a, b) => a.name > b.name ? 1 : -1).map(character => `<li><a href="/character.html?id=${character.id}">${character.name}</li>`);
   characterUl.innerHTML = charLis.join("");
-  const filmsLis = planet?.films?.map(film => `<li><a href="/film.html?id=${film.id}">${film.title}</li>`)
+  const filmsLis = planet?.films?.sort((a, b) => a.title > b.title ? 1 : -1).map(film => `<li><a href="/film.html?id=${film.id}">${film.title}</li>`)
   filmsUl.innerHTML = filmsLis.join("");
 }
