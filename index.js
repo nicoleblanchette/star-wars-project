@@ -27,7 +27,7 @@ const filterCharacters = () => {
 }
 
 const renderCharacters = characters => {
-  const divs = characters.map(character => {
+  const divs = characters.sort((a, b) => a.name > b.name ? 1 : -1).map(character => {
     const el = document.createElement('div');
     el.addEventListener('click', () => goToCharacterPage(character.id));
     el.textContent = character.name;

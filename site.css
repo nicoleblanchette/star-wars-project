@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Chakra+Petch:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap');
+
 body,
 div,
 h1,
@@ -11,13 +13,18 @@ p {
 }
 
 :root {
-  font-family: Arial, Helvetica, sans-serif;
-  --dark1: black;
+  font-family: "Chakra Petch", Arial, Helvetica, sans-serif;
+  --dark1: #28282B;
   --light1: white;
-  --dark2: darkblue;
-  --light2: lightblue;
-  background-color: var(--light1);
-  color: var(--dark1);
+  --dark2: gold;
+  --light2: #28282B;
+  background-color: var(--dark1);
+  color: var(--light1);
+}
+
+h1 {
+  text-align: center;
+  padding: 3rem
 }
 
 button {
@@ -67,6 +74,13 @@ label {
   color: var(--dark2);
   background-color: var(--light2);
   font-weight: bold;
+  transition: all, .25s ;
+}
+
+#charactersList div:hover{
+  color: var(--light2);
+  background-color: var(--dark2);
+  scale: 1.1;
 }
 
 /* Character page */
@@ -78,7 +92,7 @@ h1#name {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
-  border: 20px;
+  
 }
 
 #generalInfo p {
@@ -86,6 +100,7 @@ h1#name {
   margin: 10px;
   color: var(--dark2);
   background-color: var(--light2);
+  border: 1px, solid, var(--dark2);
 }
 
 #generalInfo span {
@@ -104,6 +119,8 @@ section#characters ul,
 section#films ul {
   list-style-type: none;
   padding: 0;
+  display: flex;
+  flex-wrap: wrap;
 }
 
 section#planets a,
@@ -120,4 +137,36 @@ section#films a {
   margin: 10px;
   border-radius: 5px;
   border: 1px solid var(--dark2);
+
+  transition: all .25s;
+}
+
+#search-div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#planets a:hover, #characters a:hover, #films a:hover{
+  color: var(--light2);
+  background-color: var(--dark2);
+  scale: 1.1;
+}
+
+#filmsList div:hover{
+  color: var(--light2);
+  background-color: var(--dark2);
+  scale: 1.1;
+}
+
+/* #opening-container {
+  width: 30%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+} */
+
+#opening {
+  margin: 3rem;
+  text-align: center;
 }
