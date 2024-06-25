@@ -159,14 +159,35 @@ section#films a {
   scale: 1.1;
 }
 
-/* #opening-container {
-  width: 30%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-} */
-
 #opening {
   margin: 3rem;
   text-align: center;
+}
+
+#navbar {
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem;
+  position: fixed;
+  top: 0px;
+  width: 90vw;
+  background-color: #28282B;
+}
+
+.navlink {
+  color: var(--dark2);
+  transition: all .25s;
+}
+
+.navlink:hover {
+  color: var(--light1)
+}
+
+
+#navbar ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  gap: 1rem;
 }
